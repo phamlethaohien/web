@@ -1,0 +1,364 @@
+.header{
+    height: 120px;
+    background-image: -webkit-linear-gradient(#f53d2d, #f63);
+}
+.header__navbar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__navbar-list{
+    padding-left: 0;
+    margin-top: 8px;
+}
+
+.header__navbar-item{
+    list-style: none;
+    display: inline-block;
+    font-size: 13.5px;
+    color: var(--white-color);
+    position: relative;
+    margin: 0 8px;
+}
+
+.header__navbar-item-link, .header__navbar-icon-link{
+    color: var(--white-color);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.header__navbar-item-link:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.header__navbar-item--separate::after{
+    content: "";
+    display: block;
+    position: absolute;
+    border-left: 1.5px solid #f68e81;
+    height: 16px;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header__navbar-icon{
+    font-size: 18px;
+    margin: 0 4px;
+}
+
+/* Header QR code */
+.header__qr{
+    width: 186px;
+    background-color: var(--white-color);
+    position: absolute;
+    left: 0;
+    top: 160%;
+    padding: 8px;
+    border-radius: 2px;
+    display: none;
+    animation: fadeIn ease 2s;
+}
+
+.header__qr::before{
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    top: -20px;
+    content: "";
+    display: block;
+}
+
+.header__qr-img{
+    width: 100%;
+}
+
+.header__qr-apps{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__qr-link:first-child{
+    margin-left: 12px;
+}
+
+.header__qr-link:last-child{
+    margin-right: 12px;
+}
+
+.header__qr-apps-img{
+    height: 16px;
+}
+
+.header__navbar-item__qr-display:hover .header__qr{
+    display: block;
+    cursor: pointer;
+}
+
+/* Header Notifications */
+.header__noti{
+    position: absolute;
+    top: 160%;
+    right: 0;
+    width: 400px;
+    border-radius: 2px;
+    border: 1px solid var(--border-color);
+    background-color: var(--white-color);
+    transform-origin: calc(100% - 20px) top;
+    animation: headerNotiGrowth ease-in 0.5s;
+    display: none;
+}
+
+@keyframes headerNotiGrowth {
+    from{
+        opacity: 0;
+        transform: scale(0);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.header__noti::before{
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    top: -20px;
+    content: "";
+    display: block;
+}
+
+.header__noti::after{
+    content: "";
+    border: 10px solid;
+    border-color: transparent transparent var(--white-color) transparent;
+    position: absolute;
+    right: 18px;
+    top: -20px;
+}
+
+.header__noti-header{
+    height: 40px;
+    background-color: var(--white-color);
+}
+
+.header__noti-header h3{
+    color: #999;
+    font-weight: 80;
+    font-size: 14px;
+    margin: 0 0 0 12px;
+    line-height: 40px;
+    user-select: none;
+}
+
+.header__noti-list{
+    padding: 0;
+}
+
+.header__noti-item{
+    display: flex;
+}
+
+.header__noti-item--viewed{
+    background-color: rgb(238, 77, 45, 0.07);
+}
+
+.header__noti-item:hover{
+    background-color: #f1f1f1cb;
+}
+
+.header__noti-link{
+    width: 100%;
+    display: flex;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.header__noti-img{
+    width: 48px;
+    height: 48px;
+}
+
+.header__noti-info{
+    margin-left: 6px;
+}
+
+.header__noti-name{
+    margin: 0;
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+.header__noti-discription{
+    margin: 4px 0 0 0;
+    font-size: 12px;
+    color: #888888;
+}
+
+.header__noti-footer{
+    width: 100%;
+    height: 40px;
+    display: flex;
+}
+
+.header__noti-footer-btn{
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 40px;
+    margin: auto;
+    padding: 0 165px 0 165px;
+}
+
+.header__noti-footer:hover{
+    background-color: #dbd9d92f;
+}
+
+.header__navbar-item--noti-display:hover .header__noti{
+    display: block;
+}
+
+/* Authentic form */
+.authentic-form{
+    width: 450px;
+}
+
+.authentic-form__container{
+    padding: 0 32px;
+}
+
+.authentic-form__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+}
+
+.authentic-form__heading{
+    font-size: 24px;
+    font-weight: 550;
+    color: var(--text-color);
+}
+
+.authentic-form__switch-btn{
+    font-size: 16px;
+    color: var(--primary-color);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.authentic-form__form{
+    
+}
+
+.authentic-form__group{
+    
+}
+
+.authentic-form__input{
+    width: 100%;
+    height: 40px;
+    margin-top: 16px;
+    padding-left: 12px;
+    font-size: 14px;
+    border-radius: 2px;
+    border: 1px solid var(--border-color);
+    outline: none;
+}
+
+.authentic-form__input:focus{
+    color: #888;
+}
+
+.authentic-form__note{
+    margin-top: 20px;
+}
+
+.authentic-form__policy{
+    font-size: 12px;
+    text-align: center;
+    
+}
+
+.authentic-form__policy-link{
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.authentic-form__controls{
+    margin-top: 80px;
+    text-align: end;
+}
+
+.authentic-form__controls-back{
+    margin-right: 8px;
+}
+
+.authentic-form__socials{
+    height: 45px;
+    background-color: #d4d3d3c0;
+    padding: 6px 32px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.authentic-form__socials-icon{
+    font-size: 18px;
+}
+
+.authentic-form__socials--facebook{
+    width: 49%;
+    color: var(--white-color);
+    background-color: #3188fa;
+}
+
+.authentic-form__socials--facebook .authentic-form__socials-icon{
+    color: var(--white-color);
+}
+
+.authentic-form__socials-title{
+    margin: 0 20px;
+}
+
+.authentic-form__socials--google.authentic-form__socials-icon{
+
+}
+
+.authentic-form__socials--google{
+    width: 49%;
+    background-color: var(--white-color);
+    color: rgb(102, 102, 102);
+}
+
+.authentic-form__help{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.authentic-form__help-link{
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.authentic-form__help--separate{
+    content: "";
+    display: block;
+    margin: 0 16px 10px;
+    border-left: 1.5px solid var(--border-color);
+    height: 20px;
+}
+
+.authentic-form__help-link--forgot{
+    color: var(--primary-color);
+}
+
+.authentic-form__help-link--help{
+    color: #777;
+}
