@@ -146,9 +146,17 @@
                             <i class="header__search-btn-icon fa fa-search" aria-hidden="true"></i>
                         </button>
                     </div>
-
+                
+                    <!-- Cart layout-->
                     <div class="header__cart">
-                        <i class="header__cart-icon fa fa-cart-plus" aria-hidden="true"></i>
+                        <div class="header__cart-wrap">
+                            <i class="header__cart-icon fa fa-shopping-cart" aria-hidden="true"></i>
+                            <!-- No cart: header__cart-list--no-product -->
+                            <div class="header__cart-list"> 
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjkf3ysF1JeCkQ7XxFOIlzEDSRLYL7Coc5paIsG3Ip_XO48NqMTa2Topp3KlOFK1pJoZg&usqp=CAU" alt="" class="header__cart-no-product-img">
+                                <p class="header__cart-no-product-msg">Chưa có sản phẩm nào!</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
