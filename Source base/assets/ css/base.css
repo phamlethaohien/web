@@ -139,3 +139,56 @@ html{
     background-color: #b8b6b6;
     color: #929292;
 }
+
+/* Selection */
+.select-input{
+    height: 34px;
+    width: 200px;
+    padding: 0 12px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    position: relative;
+}
+
+.select-input__label{
+    font-size: 14px;
+}
+
+.select-input__icon{
+    color: #999;
+    font-size: 14px;
+}
+.select-input__list{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 19px;
+    background-color: var(--white-color);
+    border-radius: 2px;
+    padding: 10px 16px;
+    display: none;
+}
+
+.select-input:hover .select-input__list{
+    display: block;
+}
+
+.select-input__item{
+    list-style: none;
+}
+
+.select-input__link{
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 14px;
+    display: block;
+    padding: 5px 0;
+}
+
+.select-input__link:hover{
+    color: var(--primary-color);
+}
