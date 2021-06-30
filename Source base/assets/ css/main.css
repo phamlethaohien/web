@@ -1096,3 +1096,7 @@
     border-style: solid;
     border-color: currentColor currentColor transparent currentColor;
 }
+
+.home-product__pagination{
+    margin: 50px 0 100px 0;
+}

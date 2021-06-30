@@ -200,3 +200,41 @@ html{
 .select-input__link:hover{
     color: var(--primary-color);
 }
+
+/* Pagination */
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination-item{
+    list-style: none;
+    margin: 0 16px;
+}
+
+.pagination-item--active .pagination-item__link{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.pagination-item--active .pagination-item__link:hover{
+    opacity: 0.8;
+}
+
+.pagination-item__link{
+    --height: 30px;
+    display: block;
+    text-decoration: none;
+    font-size: 20px;
+    color: #939393;
+    border-radius: 2px;
+    min-width: 40px;
+    height: var(--height);
+    line-height: var(--height);
+    text-align: center;
+}
+
+.pagination-item__icon{
+
+}
